@@ -6,12 +6,12 @@ Fila::~Fila(){}
 
 bool Fila::EsFilaVacia()
 {
-    return this->frente == nullptr && this->final == nullptr;
+    return frente == nullptr && final == nullptr;
 }
 
 item Fila::Frente()
 {
-    return this->frente->dato;
+    return frente->dato;
 }
 
 void Fila::Enfila(item valor)
@@ -44,7 +44,7 @@ void Fila::Defila()
 
 int Fila::Longitud()
 {
-    return this->longitud;
+    return longitud;
 }
 
 bool Fila::Pertenece(item valor)
