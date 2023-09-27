@@ -3,12 +3,10 @@
 int typedef item;
 class Nodo
 {
-private:
+public:
     item dato;
     Nodo *siguiente;
-public:
+    
     Nodo(item valor);
     ~Nodo();
-
-    item Dato();
 };
