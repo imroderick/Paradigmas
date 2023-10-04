@@ -19,4 +19,5 @@ public:
     void Defila();
     int Longitud();
     bool Pertenece(item valor);
+    void Mostrar();
 };

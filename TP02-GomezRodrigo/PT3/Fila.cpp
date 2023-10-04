@@ -2,7 +2,22 @@
 
 Fila::Fila() : frente(nullptr), final(nullptr), longitud(0){}
 
-Fila::~Fila(){}
+Fila::Fila(const Fila &copia) : frente(nullptr), final(nullptr), longitud(0)
+{
+    Nodo* nodoAuxiliar = copia.frente;
+
+    while (nodoAuxiliar) {
+        Enfila(nodoAuxiliar->dato);
+        nodoAuxiliar = nodoAuxiliar->siguiente;
+    }
+}
+
+Fila::~Fila()
+{
+    while (!EsFilaVacia()) {
+        Defila();
+    }
+}
 
 bool Fila::EsFilaVacia()
 {
@@ -22,7 +37,9 @@ void Fila::Enfila(item valor)
         final = nuevoNodo;
     }else{
         final->siguiente = nuevoNodo;
+        final = nuevoNodo;
     }
+    longitud++;
 }
 
 void Fila::Defila()
@@ -38,6 +55,7 @@ void Fila::Defila()
         }else{
             frente = frente->siguiente;
         }
+        longitud--;
         delete nodoAuxiliar;
     }
 }
@@ -49,5 +67,25 @@ int Fila::Longitud()
 
 bool Fila::Pertenece(item valor)
 {
+    Nodo *auxiliar = frente;
+    while (auxiliar)
+    {
+        if (auxiliar->dato == valor)
+        {
+            return true;
+        }
+        auxiliar = auxiliar->siguiente;
+    }
     return false;
+}
+
+void Fila::Mostrar()
+{
+    Nodo *auxiliar = frente;
+    while (auxiliar)
+    {
+        cout << auxiliar->dato << " ";
+        auxiliar = auxiliar->siguiente;
+    }
+    cout << endl;
 }
