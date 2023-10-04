@@ -5,13 +5,14 @@ class Vector
 {
 private:
     int maximo;
+    int indice;
     Producto **productos;
-    void reservarMemoria(int tamanio);
+    bool reservarMemoria(int tamanio);
 public:
     Vector(int _maximo);
     ~Vector();
 
-    int getCapacidad();
+    int GetCapacidad();
+    void AgregarProducto(Producto *producto);
     Producto operator[](int posicion);
 };
-
