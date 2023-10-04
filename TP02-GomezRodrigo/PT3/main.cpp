@@ -56,14 +56,18 @@ int main() {
 
 
 	// Muestro por pantalla la fila luego de la invocacion a la operaci�n mostrar
-	cout<<"Muestro por pantalla la fila luego de invocar a la operacion externa contarX"<<endl;
+	cout<<"Muestro por pantalla la fila luego de invocar a la operacion externa contarX (con constructor copia)"<<endl;
 	F.Mostrar();
 
 	return 0 ;
 }
 
 int contarX(Fila F, item X){
-
-	//Implementar 
-	
+	int contador = 0;
+	while (!F.EsFilaVacia())
+	{
+		contador += F.Frente() == X ? 1 : 0;
+		F.Defila();
+	}
+	return contador;
 }
