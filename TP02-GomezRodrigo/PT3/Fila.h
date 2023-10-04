@@ -11,6 +11,7 @@ private:
     int longitud;
 public:
     Fila();
+    Fila(const Fila& otraFila);
     ~Fila();
 
     bool EsFilaVacia();
