@@ -15,4 +15,5 @@ public:
     int GetCapacidad();
     void AgregarProducto(Producto *producto);
     Producto operator[](int posicion);
+    void MostrarInformacion();
 };

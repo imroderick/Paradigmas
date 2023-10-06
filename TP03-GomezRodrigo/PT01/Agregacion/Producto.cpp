@@ -2,6 +2,8 @@
 #include <iostream>
 using namespace std;
 
+int Producto::autonumerico = 0;
+
 Producto::Producto() : IVA(1.21){}
 
 Producto::Producto(string _descripcion, float _precioBase) : IVA(1.21)
@@ -16,7 +18,7 @@ Producto::~Producto(){}
 
 void Producto::ListarInformacion()
 {
-    cout << "-----------INFORMACIÓN DEL PRODUCTO: " << codigo << "-----------" << endl;
+    cout << "--------INFORMACIÓN DEL PRODUCTO: " << codigo << "--------" << endl;
     cout << "Descripcion: " << descripcion << endl;
     cout << "Precio base: " << precioBase << endl;
     cout << "Precio final con IVA: " << CalcularPrecioDeVenta() << endl; 
@@ -27,4 +29,5 @@ float Producto::CalcularPrecioDeVenta()
 {
     float precioFinal = 0;
     precioFinal = precioBase * IVA;
+    return precioFinal;
 }

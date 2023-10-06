@@ -14,7 +14,7 @@ Vector::Vector(int _maximo) : indice(0)
 
 bool Vector::reservarMemoria(int tamanio)
 {
-    *productos = new Producto[tamanio];
+    productos = new Producto *[tamanio];
     if (!productos)
     {
         cerr << "Memoria insuficiente." << endl;
@@ -33,11 +33,26 @@ int Vector::GetCapacidad()
 
 void Vector::AgregarProducto(Producto *producto)
 {
-    *(productos+indice) = producto;
-    indice++;
+    if (indice > maximo)
+    {
+        cerr << "No hay más espacio disponible en el vector." << endl;
+    }else{
+        *(productos+indice) = producto;
+        indice++;
+    }    
 }
 
 Producto Vector::operator[](int posicion)
 {
     return **(productos+posicion);
+}
+
+void Vector::MostrarInformacion()
+{
+    cout << "El vector tiene una longitud de: " << indice << endl;
+    cout << "El vector tiene una capacidad máxima de: " << maximo << endl;
+    for (size_t i = 0; i < maximo; i++)
+    {
+        (*(productos+i))->ListarInformacion();
+    }
 }
