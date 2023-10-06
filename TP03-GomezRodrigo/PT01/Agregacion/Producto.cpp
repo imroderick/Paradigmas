@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int Producto::autonumerico = 0;
+int Producto::autonumerico = 1;
 
 Producto::Producto() : IVA(1.21){}
 

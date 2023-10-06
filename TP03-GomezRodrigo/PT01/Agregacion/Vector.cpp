@@ -51,7 +51,7 @@ void Vector::MostrarInformacion()
 {
     cout << "El vector tiene una longitud de: " << indice << endl;
     cout << "El vector tiene una capacidad máxima de: " << maximo << endl;
-    for (size_t i = 0; i < maximo; i++)
+    for (size_t i = 0; i < indice; i++)
     {
         (*(productos+i))->ListarInformacion();
     }
