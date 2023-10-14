@@ -1,6 +1,6 @@
 #pragma once
 #include "iostream"
-using namespace std;
+using std::string, std::cin, std::cout, std::endl;
 
 
 class Persona
@@ -14,5 +14,8 @@ public:
     Persona(const Persona &copia);
     ~Persona();
 
+    string GetNombre();
+    string GetBiografia();
+    int GetEdad();
     void MostrarInformacion();
 };
