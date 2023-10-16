@@ -17,4 +17,5 @@ public:
     int GetDia();
     int GetMes();
     int GetAnio();
+    string GetFecha();
 };
