@@ -2,7 +2,6 @@
 #include "iostream"
 using std::string, std::cin, std::cout, std::endl;
 
-
 class Persona
 {
 private:
@@ -17,5 +16,4 @@ public:
     string GetNombre();
     string GetBiografia();
     int GetEdad();
-    void MostrarInformacion();
 };

@@ -12,10 +12,3 @@ string Persona::GetNombre(){ return nombre; }
 string Persona::GetBiografia(){ return biografia; }
 
 int Persona::GetEdad(){ return edad; }
-
-void Persona::MostrarInformacion()
-{
-    cout << "Nombre: " << nombre << endl;
-    cout << "Biografia: " << biografia << endl;
-    cout << "Edad: " << edad << endl;
-}
