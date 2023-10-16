@@ -9,6 +9,7 @@ private:
     string biografia;
     int edad;
 public:
+    Persona();
     Persona(string _nombre, string _biografia, int _edad);
     Persona(const Persona &copia);
     ~Persona();
