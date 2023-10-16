@@ -1,7 +1,8 @@
 #include <iostream>
-using namespace std;
+#include "Pelicula.h"
 
-// int main()
-// {
-//     cout << "Template" << endl;
-// }
+int main()
+{
+    cout << "Template" << endl;
+    return 0;
+}
