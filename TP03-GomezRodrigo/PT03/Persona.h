@@ -1,6 +1,6 @@
 #pragma once
 #include "iostream"
-using std::string, std::cin, std::cout, std::endl;
+using namespace std;
 
 class Persona
 {

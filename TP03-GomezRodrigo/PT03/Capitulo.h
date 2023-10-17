@@ -1,7 +1,6 @@
 #pragma once
-#include <iostream>
 #include "Persona.h"
-using std::string, std::cin, std::cout, std::endl;
+using namespace std;
 
 class Capitulo
 {
@@ -16,4 +15,3 @@ public:
     Capitulo(const Capitulo &copia);
     ~Capitulo();
 };
-
