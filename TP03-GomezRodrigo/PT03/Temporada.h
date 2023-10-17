@@ -12,7 +12,7 @@ private:
     int indice;
 public:
     Temporada();
-    Temporada(Fecha _fechaProduccion, Fecha fechaEstreno);
+    Temporada(Fecha _fechaProduccion, Fecha _fechaEstreno);
     ~Temporada();
 
     void agregarCapitulo(string _titulo, Persona _director, int _duracion, string _sinopsis);
